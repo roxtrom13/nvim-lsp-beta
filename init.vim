@@ -91,6 +91,7 @@ nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
 vnoremap <leader>p "_dP
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
+nnoremap <silent><leader>e :edit<CR>
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
