@@ -1,13 +1,11 @@
 -- sumneko_root_path conf
 -- sumneko_binary conf
 
-vim.o.completeopt = "menuone,noinsert,noselect"
-
 local function on_attach()
     -- TODO: Implement Telescopic stuff
 end
 
-require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
+require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 
 local opts = {
     -- whether to highlight the currently hovered symbol
