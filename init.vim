@@ -11,6 +11,7 @@ Plug 'simrat39/symbols-outline.nvim'
 " Color schemes
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
+Plug 'folke/lsp-colors.nvim'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'

@@ -1,8 +1,8 @@
 " Base maps
 nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <silent><leader>e :edit<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+nnoremap <silent><leader>w :w<CR> :edit<CR>
 
 " Navigation
 nnoremap <leader>vs :vspilt<CR>
