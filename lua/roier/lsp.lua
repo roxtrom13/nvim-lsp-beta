@@ -6,6 +6,32 @@ local function on_attach()
 end
 
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+require'lspconfig'.vuels.setup{
+  on_attach=on_attach,
+  cmd = { "vls" },
+    filetypes = { "vue" },
+    init_options = {
+      config = {
+        vetur = {
+          completion = {
+            autoImport = false,
+            tagCasing = "kebab",
+            useScaffoldSnippets = false
+          },
+          format = {
+            scriptInitialIndent = false,
+            styleInitialIndent = false
+          },
+          useWorkspaceDependencies = false,
+          validation = {
+            script = true,
+            style = true,
+            template = true
+          }
+        }
+      }
+    }
+}
 
 local opts = {
     -- whether to highlight the currently hovered symbol
