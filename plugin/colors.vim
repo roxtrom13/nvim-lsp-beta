@@ -9,9 +9,9 @@ fun! ColorMyPencils()
 
     set background=dark
     if has('nvim')
-        call luaeval('vim.cmd("colorscheme " .. _A[1])', ["gruvbox"])
+        call luaeval('vim.cmd("colorscheme " .. _A[1])', ["ayu"])
     else
-        colorscheme gruvbox
+        colorscheme ayu
     endif
 
     highlight ColorColumn ctermbg=0 guibg=#282140
