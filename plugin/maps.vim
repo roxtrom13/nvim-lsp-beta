@@ -1,8 +1,34 @@
 " Base maps
 nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap Y y$
+
+" Moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-1<CR>==
+
+" Keeping cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo break points
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ; ;<C-g>u
+inoremap [ [<C-g>u
+inoremap ! !<C-g>u
+inoremap ? ?<C-g>u
+
+" Jumplist mutations
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " Navigation
 nnoremap <leader>vs :vspilt<CR>
