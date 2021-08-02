@@ -20,9 +20,12 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Syntax plugins
 Plug 'tbastos/vim-lua'
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'
 
 " Helpers
 Plug 'preservim/nerdcommenter'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Status bottom bar
 Plug 'vim-airline/vim-airline'

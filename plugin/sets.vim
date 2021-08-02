@@ -16,5 +16,4 @@ set undodir=~/.vim/undodir
 set undofile
 set scrolloff=8
 set signcolumn=yes
-set colorcolumn=92
 set guicursor=
