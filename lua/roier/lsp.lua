@@ -5,6 +5,7 @@ local function on_attach()
     -- TODO: Implement Telescopic stuff
 end
 
+require'lspconfig'.pyright.setup{ on_attach=on_attach }
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 require'lspconfig'.vuels.setup{
   on_attach=on_attach,

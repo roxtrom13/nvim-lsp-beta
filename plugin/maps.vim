@@ -53,17 +53,17 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 " LSP
-nnoremap <silent><leader>gd :lua vim.lsp.buf.definition()<CR>
-nnoremap <silent><leader>gi :lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent><leader>gr :lua vim.lsp.buf.references()<CR>
-nnoremap <silent><leader>sh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent><leader>rn :lua vim.lsp.buf.rename()<CR>
-nnoremap <silent><leader>ca :lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent><leader>sd :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <silent><leader>gn :lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent><leader>vll :call LspLocationList()<CR>
-nnoremap <silent>F :lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent>K :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <leader>gr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>sh :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>ca :lua vim.lsp.buf.code_action()<CR>
+nnoremap <leader>sd :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <leader>gn :lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <leader>vll :call LspLocationList()<CR>
+nnoremap F :lua vim.lsp.buf.formatting()<CR>
+nnoremap K :lua vim.lsp.buf.hover()<CR>
 
 " Prettier
 nnoremap <silent><leader>f :Prettier<CR>
