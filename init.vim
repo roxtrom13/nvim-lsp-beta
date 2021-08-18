@@ -22,6 +22,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'tbastos/vim-lua'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
+Plug 'psf/black'
 
 " Helpers
 Plug 'preservim/nerdcommenter'

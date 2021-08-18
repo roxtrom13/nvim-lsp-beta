@@ -1,6 +1,32 @@
 " Base maps
 nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap Y y$
+
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-1<CR>==
+
+" Keeping cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo break points
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap ; ;<C-g>u
+inoremap [ [<C-g>u
+inoremap ! !<C-g>u
+inoremap ? ?<C-g>u
+
+" Jumplist mutations
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " Navigation
 nnoremap <leader>vs :vspilt<CR>
@@ -27,17 +53,17 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 " LSP
-nnoremap <silent><leader>gd :lua vim.lsp.buf.definition()<CR>
-nnoremap <silent><leader>gi :lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent><leader>gr :lua vim.lsp.buf.references()<CR>
-nnoremap <silent><leader>sh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent><leader>rn :lua vim.lsp.buf.rename()<CR>
-nnoremap <silent><leader>ca :lua vim.lsp.buf.code_action()<CR>
-nnoremap <silent><leader>sd :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <silent><leader>gn :lua vim.lsp.diagnostic.goto_next()<CR>
-nnoremap <silent><leader>vll :call LspLocationList()<CR>
-nnoremap <silent>F :lua vim.lsp.buf.formatting()<CR>
-nnoremap <silent>K :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>gd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>gi :lua vim.lsp.buf.implementation()<CR>
+nnoremap <leader>gr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>sh :lua vim.lsp.buf.signature_help()<CR>
+nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>ca :lua vim.lsp.buf.code_action()<CR>
+nnoremap <leader>sd :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <leader>gn :lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <leader>vll :call LspLocationList()<CR>
+nnoremap F :lua vim.lsp.buf.formatting()<CR>
+nnoremap K :lua vim.lsp.buf.hover()<CR>
 
 " Prettier
 nnoremap <silent><leader>f :Prettier<CR>

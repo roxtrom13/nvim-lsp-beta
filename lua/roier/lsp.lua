@@ -6,6 +6,7 @@ local function on_attach()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.cssls.setup {
@@ -15,6 +16,8 @@ require'lspconfig'.cssls.setup {
 require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
+
+require'lspconfig'.pyright.setup{ on_attach=on_attach }
 
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 
