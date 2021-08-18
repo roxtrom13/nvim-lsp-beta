@@ -5,7 +5,19 @@ local function on_attach()
     -- TODO: Implement Telescopic stuff
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+
 require'lspconfig'.vuels.setup{
   on_attach=on_attach,
   cmd = { "vls" },

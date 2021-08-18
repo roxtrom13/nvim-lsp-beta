@@ -1,7 +1,5 @@
 " Base maps
 nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent><leader>w :w<CR> :edit<CR>
 
 " Navigation
@@ -44,3 +42,30 @@ nnoremap <silent>K :lua vim.lsp.buf.hover()<CR>
 " Prettier
 nnoremap <silent><leader>f :Prettier<CR>
 
+" Vimrc
+nnoremap <silent><leader>mm :e ~/.config/nvim/plugin/maps.vim<CR>
+
+" Remaps
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo breakpoints
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ; ;<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+"nnoremap <C-j> :cnext<CR>zzzv
+
+" Jumplist mutations
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+" Moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
